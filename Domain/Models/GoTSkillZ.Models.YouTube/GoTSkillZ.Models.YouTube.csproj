@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5222F04B-0EC0-49E4-8667-F1C3B64B1480}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoTSkillZ.Models.YouTube</RootNamespace>
+    <AssemblyName>GoTSkillZ.Models.YouTube</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\GoTSkillZYouTubeLiveStreamEntities.cs" />
+    <Compile Include="Data\GoTSkillZYouTubePlaylistsEntities.cs" />
+    <Compile Include="Data\GoTSkillZYouTubeSubscriberListEntities.cs" />
+    <Compile Include="Data\GoTSkillZYouTubeSubscriberListModel.Context.cs">
+      <DependentUpon>GoTSkillZYouTubeSubscriberListModel.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\GoTSkillZYouTubeSubscriberListModel.cs">
+      <DependentUpon>GoTSkillZYouTubeSubscriberListModel.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\GoTSkillZYouTubeSubscriberListModel.Designer.cs">
+      <DependentUpon>GoTSkillZYouTubeSubscriberListModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\GoTSkillZYouTubeSuperChatListEntities.cs" />
+    <Compile Include="Data\GoTSkillZYouTubeVideosEntities.cs" />
+    <Compile Include="Data\YouTubeLiveStream.cs">
+      <DependentUpon>YouTubeLiveStreamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeLiveStreamModel.Context.cs">
+      <DependentUpon>YouTubeLiveStreamModel.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\YouTubeLiveStreamModel.cs">
+      <DependentUpon>YouTubeLiveStreamModel.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\YouTubeLiveStreamModel.Designer.cs">
+      <DependentUpon>YouTubeLiveStreamModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\YouTubePlaylist.cs">
+      <DependentUpon>YouTubePlaylistsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubePlaylistsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouTubePlaylistsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubePlaylistsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouTubePlaylistsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubePlaylistsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouTubePlaylistsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeSubscriberList.cs">
+      <DependentUpon>GoTSkillZYouTubeSubscriberListModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeSuperChatList.cs">
+      <DependentUpon>YouTubeSuperChatListModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeSuperChatListModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouTubeSuperChatListModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeSuperChatListModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouTubeSuperChatListModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeSuperChatListModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouTubeSuperChatListModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeVideo.cs">
+      <DependentUpon>YouTubeVideosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeVideosModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouTubeVideosModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeVideosModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouTubeVideosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YouTubeVideosModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YouTubeVideosModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IYouTubeLiveStreamProvider.cs" />
+    <Compile Include="Interfaces\IYouTubePlaylistsProvider.cs" />
+    <Compile Include="Interfaces\IYouTubeSubscriberListProvider.cs" />
+    <Compile Include="Interfaces\IYouTubeSuperChatListProvider.cs" />
+    <Compile Include="Interfaces\IYouTubeVideosProvider.cs" />
+    <Compile Include="Provider\YouTubePlaylistsProvider.cs" />
+    <Compile Include="Provider\YouTubeSubscriberListProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\YouTubeLiveStreamProvider.cs" />
+    <Compile Include="Provider\YouTubeSuperChatListProvider.cs" />
+    <Compile Include="Provider\YouTubeVideosProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataUtilities\GoTSkillZ.DataUtilities.Core\GoTSkillZ.DataUtilities.Core.csproj">
+      <Project>{604cdcaa-73d1-4e49-8d6f-beb3442349e1}</Project>
+      <Name>GoTSkillZ.DataUtilities.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Data\YouTubeLiveStreamModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>YouTubeLiveStreamModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\GoTSkillZYouTubeSubscriberListModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZYouTubeSubscriberListModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZYouTubeSubscriberListModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZYouTubeSubscriberListModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZYouTubeSubscriberListModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZYouTubeSubscriberListModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\YouTubeLiveStreamModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YouTubeLiveStreamModel.edmx</DependentUpon>
+      <LastGenOutput>YouTubeLiveStreamModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\YouTubeLiveStreamModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YouTubeLiveStreamModel.edmx</DependentUpon>
+      <LastGenOutput>YouTubeLiveStreamModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\YouTubePlaylistsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YouTubePlaylistsModel.edmx</DependentUpon>
+      <LastGenOutput>YouTubePlaylistsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\YouTubePlaylistsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YouTubePlaylistsModel.edmx</DependentUpon>
+      <LastGenOutput>YouTubePlaylistsModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\YouTubeSuperChatListModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YouTubeSuperChatListModel.edmx</DependentUpon>
+      <LastGenOutput>YouTubeSuperChatListModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\YouTubeSuperChatListModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YouTubeSuperChatListModel.edmx</DependentUpon>
+      <LastGenOutput>YouTubeSuperChatListModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\YouTubeVideosModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YouTubeVideosModel.edmx</DependentUpon>
+      <LastGenOutput>YouTubeVideosModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\YouTubeVideosModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YouTubeVideosModel.edmx</DependentUpon>
+      <LastGenOutput>YouTubeVideosModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Data\GoTSkillZYouTubeSubscriberListModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GoTSkillZYouTubeSubscriberListModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\GoTSkillZYouTubeSubscriberListModel.edmx.diagram">
+      <DependentUpon>GoTSkillZYouTubeSubscriberListModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\YouTubeLiveStreamModel.edmx.diagram">
+      <DependentUpon>YouTubeLiveStreamModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Data\YouTubePlaylistsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>YouTubePlaylistsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\YouTubePlaylistsModel.edmx.diagram">
+      <DependentUpon>YouTubePlaylistsModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Data\YouTubeVideosModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>YouTubeVideosModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Data\YouTubeSuperChatListModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>YouTubeSuperChatListModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\YouTubeSuperChatListModel.edmx.diagram">
+      <DependentUpon>YouTubeSuperChatListModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\YouTubeVideosModel.edmx.diagram">
+      <DependentUpon>YouTubeVideosModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

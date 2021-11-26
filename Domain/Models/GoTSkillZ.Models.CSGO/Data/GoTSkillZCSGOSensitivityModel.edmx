@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GoTSkillZCSGOSensitivityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CSGOSensitivity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Sensitivity" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="DPI" Type="int" Nullable="false" />
+          <Property Name="eDPI" Type="int" Nullable="false" />
+          <Property Name="RawInput" Type="bit" Nullable="false" />
+          <Property Name="WindowsSensitivity" Type="int" Nullable="false" />
+          <Property Name="MouseHz" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="StartUnixDatetime" Type="bigint" Nullable="false" />
+          <Property Name="EndUnixDatetime" Type="bigint" />
+        </EntityType>
+        <EntityContainer Name="GoTSkillZCSGOSensitivityModelStoreContainer">
+          <EntitySet Name="CSGOSensitivity" EntityType="Self.CSGOSensitivity" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GoTSkillZCSGOSensitivityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CSGOSensitivity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Sensitivity" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="DPI" Type="Int32" Nullable="false" />
+          <Property Name="eDPI" Type="Int32" Nullable="false" />
+          <Property Name="RawInput" Type="Boolean" Nullable="false" />
+          <Property Name="WindowsSensitivity" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MouseHz" Type="Int32" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="StartUnixDatetime" Type="Int64" Nullable="false" />
+          <Property Name="EndUnixDatetime" Type="Int64" />
+        </EntityType>
+        <EntityContainer Name="GoTSkillZCSGOSensitivityEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CSGOSensitivities" EntityType="Self.CSGOSensitivity" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GoTSkillZCSGOSensitivityModelStoreContainer" CdmEntityContainer="GoTSkillZCSGOSensitivityEntities">
+          <EntitySetMapping Name="CSGOSensitivities">
+            <EntityTypeMapping TypeName="GoTSkillZCSGOSensitivityModel.CSGOSensitivity">
+              <MappingFragment StoreEntitySet="CSGOSensitivity">
+                <ScalarProperty Name="EndUnixDatetime" ColumnName="EndUnixDatetime" />
+                <ScalarProperty Name="StartUnixDatetime" ColumnName="StartUnixDatetime" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Sensitivity" ColumnName="Sensitivity" />
+                <ScalarProperty Name="DPI" ColumnName="DPI" />
+                <ScalarProperty Name="eDPI" ColumnName="eDPI" />
+                <ScalarProperty Name="RawInput" ColumnName="RawInput" />
+                <ScalarProperty Name="WindowsSensitivity" ColumnName="WindowsSensitivity" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="MouseHz" ColumnName="MouseHz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

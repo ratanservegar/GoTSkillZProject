@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GoTSkillZYouTubeSuperChatListModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="YouTubeSuperChatList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YouTubeSuperChatId" Type="nvarchar(max)" />
+          <Property Name="Channeld" Type="nvarchar(max)" />
+          <Property Name="ChannelUrl" Type="nvarchar(max)" />
+          <Property Name="DisplayName" Type="nvarchar(max)" />
+          <Property Name="CommentText" Type="nvarchar(max)" />
+          <Property Name="Currency" Type="nvarchar(max)" />
+          <Property Name="DisplayString" Type="nvarchar(max)" />
+          <Property Name="AmountMicros" Type="nvarchar(max)" />
+          <Property Name="ProfileImageUrl" Type="nvarchar(max)" />
+          <Property Name="MessageType" Type="int" />
+          <Property Name="IsSuperStickerEvent" Type="bit" />
+          <Property Name="StickerId" Type="nvarchar" MaxLength="300" />
+          <Property Name="altText" Type="nvarchar" MaxLength="300" />
+          <Property Name="ShowSuperChat" Type="bit" />
+          <Property Name="CreatedAt" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="GoTSkillZYouTubeSuperChatListModelStoreContainer">
+          <EntitySet Name="YouTubeSuperChatList" EntityType="Self.YouTubeSuperChatList" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GoTSkillZYouTubeSuperChatListModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="YouTubeSuperChatList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Channeld" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChannelUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CommentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Currency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AmountMicros" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProfileImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MessageType" Type="Int32" />
+          <Property Name="IsSuperStickerEvent" Type="Boolean" />
+          <Property Name="StickerId" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="altText" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="YouTubeSuperChatId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShowSuperChat" Type="Boolean" />
+          <Property Name="CreatedAt" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="GoTSkillZYouTubeSuperChatListEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="YouTubeSuperChatLists" EntityType="Self.YouTubeSuperChatList" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GoTSkillZYouTubeSuperChatListModelStoreContainer" CdmEntityContainer="GoTSkillZYouTubeSuperChatListEntities">
+          <EntitySetMapping Name="YouTubeSuperChatLists">
+            <EntityTypeMapping TypeName="GoTSkillZYouTubeSuperChatListModel.YouTubeSuperChatList">
+              <MappingFragment StoreEntitySet="YouTubeSuperChatList">
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="ShowSuperChat" ColumnName="ShowSuperChat" />
+                <ScalarProperty Name="YouTubeSuperChatId" ColumnName="YouTubeSuperChatId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Channeld" ColumnName="Channeld" />
+                <ScalarProperty Name="ChannelUrl" ColumnName="ChannelUrl" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="DisplayString" ColumnName="DisplayString" />
+                <ScalarProperty Name="AmountMicros" ColumnName="AmountMicros" />
+                <ScalarProperty Name="ProfileImageUrl" ColumnName="ProfileImageUrl" />
+                <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+                <ScalarProperty Name="IsSuperStickerEvent" ColumnName="IsSuperStickerEvent" />
+                <ScalarProperty Name="StickerId" ColumnName="StickerId" />
+                <ScalarProperty Name="altText" ColumnName="altText" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

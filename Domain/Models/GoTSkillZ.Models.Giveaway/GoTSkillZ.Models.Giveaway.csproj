@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29EDA099-6492-4358-B2A6-801594EED5F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoTSkillZ.Models.Giveaway</RootNamespace>
+    <AssemblyName>GoTSkillZ.Models.Giveaway</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Giveaway.cs">
+      <DependentUpon>GoTSkillZGiveawayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GiveawayEntryCode.cs">
+      <DependentUpon>GiveawayEntryCodeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GiveawayEntryCodeEntities.cs" />
+    <Compile Include="Data\GiveawayEntryCodeModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GiveawayEntryCodeModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GiveawayEntryCodeModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GiveawayEntryCodeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GiveawayEntryCodeModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GiveawayEntryCodeModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GiveawayWinner.cs">
+      <DependentUpon>GoTSkillZGiveawayWinnersModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGiveawayEntities.cs" />
+    <Compile Include="Data\GoTSkillZGiveawayModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGiveawayModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGiveawayModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGiveawayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGiveawayModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGiveawayModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGiveawayWinnersEntities.cs" />
+    <Compile Include="Data\GoTSkillZGiveawayWinnersModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGiveawayWinnersModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGiveawayWinnersModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGiveawayWinnersModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGiveawayWinnersModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGiveawayWinnersModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IGiveawayEntryCodeProvider.cs" />
+    <Compile Include="Interfaces\IGiveawayProvider.cs" />
+    <Compile Include="Interfaces\IGiveawayWinnersProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\GiveawayEntryCodeProvider.cs" />
+    <Compile Include="Provider\GiveawayProvider.cs" />
+    <Compile Include="Provider\GiveawayWinnersProvider.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataUtilities\GoTSkillZ.DataUtilities.Core\GoTSkillZ.DataUtilities.Core.csproj">
+      <Project>{604cdcaa-73d1-4e49-8d6f-beb3442349e1}</Project>
+      <Name>GoTSkillZ.DataUtilities.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Data\GoTSkillZGiveawayModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GoTSkillZGiveawayModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Data\GiveawayEntryCodeModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GiveawayEntryCodeModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\GiveawayEntryCodeModel.edmx.diagram">
+      <DependentUpon>GiveawayEntryCodeModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\GoTSkillZGiveawayModel.edmx.diagram">
+      <DependentUpon>GoTSkillZGiveawayModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Data\GoTSkillZGiveawayWinnersModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GoTSkillZGiveawayWinnersModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\GoTSkillZGiveawayWinnersModel.edmx.diagram">
+      <DependentUpon>GoTSkillZGiveawayWinnersModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\GiveawayEntryCodeModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GiveawayEntryCodeModel.edmx</DependentUpon>
+      <LastGenOutput>GiveawayEntryCodeModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GiveawayEntryCodeModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GiveawayEntryCodeModel.edmx</DependentUpon>
+      <LastGenOutput>GiveawayEntryCodeModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZGiveawayModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GoTSkillZGiveawayModel.Context.cs</LastGenOutput>
+      <DependentUpon>GoTSkillZGiveawayModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data\GoTSkillZGiveawayModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZGiveawayModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZGiveawayModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZGiveawayWinnersModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZGiveawayWinnersModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZGiveawayWinnersModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZGiveawayWinnersModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZGiveawayWinnersModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZGiveawayWinnersModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

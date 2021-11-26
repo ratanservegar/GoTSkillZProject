@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="GoTSkillZ.Web.UI.Site.WCF.PartnerAPI" CodeBehind="PartnerAPI.svc.cs" %>

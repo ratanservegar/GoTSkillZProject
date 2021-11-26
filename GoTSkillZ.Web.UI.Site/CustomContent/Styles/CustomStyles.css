@@ -1,0 +1,503 @@
+﻿body {
+    background-image: url("/CustomContent/Images/gotskillz-background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.br-footer {
+    position: relative;
+    bottom: 0;
+}
+
+#section-text, #mouse-poll-section-text {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 420px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+#profile-alias {
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    font-size: x-large;
+}
+
+
+#subscribe-btn {
+    color: #fff;
+    background-color: #b31217;
+    border-color: #b31217;
+}
+
+
+#subscribe-btn-txt {
+    width: 100%;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#profile-header-image {
+    background-size: cover;
+}
+
+#user-edit-modal .modal-lg {
+    max-width: 100% !important;
+}
+
+
+
+#user-add-modal .modal-lg {
+    max-width: 100% !important;
+}
+
+#user-setup-add-modal .modal-lg {
+    max-width: 100% !important;
+}
+
+
+#user-edit-modal .modal-content .modal-body {
+    background-color: #1a2432;
+}
+
+#user-setup-add-modal .modal-content .modal-header {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+#user-setup-add-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#user-setup-add-modal .modal-content .modal-body {
+    background-color: #1a2432;
+}
+
+
+#user-peripheral-add-modal .modal-content .modal-header {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+#user-peripheral-add-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#user-peripheral-add-modal .modal-content .modal-body {
+    background-color: #1a2432;
+}
+
+
+
+#giveaway-add-modal .modal-content .modal-header {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+#giveaway-add-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#giveaway-add-modal .modal-content .modal-body {
+    background-color: #1a2432;
+}
+
+
+#enter-giveaway-modal .modal-content .modal-header {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+#enter-giveaway-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#pick-winner-modal .modal-content .modal-body {
+    background-color: #1a2432;
+}
+
+
+#pick-winner-modal .modal-content .modal-header {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+#pick-winner-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#pick-winner-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#revoke-modal .modal-content .modal-body {
+    background-color: #1a2432;
+}
+
+
+#revoke-modal .modal-content .modal-header {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+#revoke-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#revoke-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+
+
+#add-config-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#add-config-modal .modal-content .modal-body {
+    background-color: #1a2432;
+}
+
+
+
+#csgo-video-modal .modal-content .modal-header {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+#csgo-video-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#csgo-video-modal .modal-content .modal-body {
+    background-color: #1a2432;
+}
+
+#csgo-mouse-settings-modal .modal-content .modal-header {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+#csgo-mouse-settings-modal .modal-content .modal-footer {
+    border: 0 !important;
+    background-color: #1a2432;
+}
+
+
+#csgo-mouse-settings-modal .modal-content .modal-body {
+    background-color: #1a2432;
+}
+
+
+
+#ui-datepicker-div {
+    z-index: 2351 !important;
+}
+
+
+
+#user-edit-modal > .modal-dialog {
+    overflow-y: initial !important;
+}
+
+#user-setup-edit-modal > .modal-dialog {
+    overflow-y: initial !important;
+}
+
+#user-edit-modal > .modal-dialog > .modal-content > .modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+#user-setup-edit-modal > .modal-dialog > .modal-content > .modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.remove-achivement {
+    float: right;
+}
+
+
+.k-dropdown-wrap {
+    height: 40px !important;
+}
+
+.note-editor.note-frame {
+    border: 1px solid #2b3542 !important;
+}
+
+
+ul.teamhistory-timeline {
+    list-style-type: none;
+    position: relative;
+    padding-right: 50px;
+}
+
+    ul.teamhistory-timeline:before {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: 29px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+    }
+
+    ul.teamhistory-timeline > li {
+        margin: 20px 0;
+        padding-left: 20px;
+    }
+
+        ul.teamhistory-timeline > li:before {
+            content: ' ';
+            background: white;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #1CAF9A;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+        }
+
+@media (max-width: 600px) {
+    .wizard > .steps > ul > li {
+        width: 50%;
+    }
+
+    .wizard > .steps a,
+    .wizard > .steps a:hover,
+    .wizard > .steps a:active {
+        margin-top: 0.5em;
+    }
+
+    .wizard.vertical > .steps,
+    .wizard.vertical > .actions {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+    .wizard.vertical > .content {
+        display: block;
+        float: none;
+        margin: 0 0.5em 0.5em;
+        width: auto;
+    }
+
+    .wizard > .steps > ul {
+        overflow-x: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .wizard > .steps > ul > li {
+        width: 100%;
+    }
+
+    .wizard > .steps > ul {
+        overflow-x: auto !important;
+    }
+}
+
+.wizard > .steps > ul {
+    overflow-x: auto !important;
+}
+
+
+.k-clear-selected, .k-upload-selected {
+    display: none !important;
+}
+
+
+#yTsubs, #siteUsers, #ytMembers, #donations {
+    overflow: hidden;
+    height: 450px;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.toggle-on, .toggle-off {
+    padding: 5px !important;
+}
+
+.irs-min {
+    color: teal !important;
+    font-size: 14px !important;
+}
+
+.irs-max {
+    color: teal !important;
+    font-size: 14px !important;
+}
+
+
+
+.CodeMirror-overlayscroll {
+    height: 100% !important;
+}
+
+
+.playlist-items {
+    border: 1px solid #0a8086;
+    border-radius: 4px;
+    padding: 1px;
+    width: 400px;
+    margin: 5px;
+}
+
+.video-items {
+    max-height: 100vh;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+
+
+
+/* giveaway enter button */
+.glow-on-hover {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #1CAF9A;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  
+}
+
+.glow-on-hover:active {
+    color: #fff
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #1CAF9A;
+        left: 0;
+        top: 0;
+       
+    }
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.gradient-border {
+    --border-width: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background: #222;
+    border-radius: var(--border-width);
+}
+
+.gradient-border::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GoTSkillZCSGOVideoConfigurationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CSGOVideoConfiguration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="ColorMode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Brightness" Type="nvarchar" MaxLength="50" />
+          <Property Name="AspectRatio" Type="nvarchar" MaxLength="50" />
+          <Property Name="Resolution" Type="nvarchar" MaxLength="50" />
+          <Property Name="DisplayMode" Type="nvarchar" MaxLength="50" />
+          <Property Name="LaptopPowerSavings" Type="nvarchar" MaxLength="50" />
+          <Property Name="GlobalShadowQuality" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModelTextureDetail" Type="nvarchar" MaxLength="50" />
+          <Property Name="EffectDetail" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShaderDetail" Type="nvarchar" MaxLength="50" />
+          <Property Name="MultiCoreRendering" Type="nvarchar" MaxLength="50" />
+          <Property Name="MultisamplingAntiAliasingMode" Type="nvarchar" MaxLength="50" />
+          <Property Name="FXXAAAnti-Aliasing" Type="nvarchar" MaxLength="50" />
+          <Property Name="TextureFilteringMode" Type="nvarchar" MaxLength="50" />
+          <Property Name="WaitForVerticalSync" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotionBlur" Type="nvarchar" MaxLength="50" />
+          <Property Name="TripleMonitorMode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="GameView" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="GoTSkillZCSGOVideoConfigurationModelStoreContainer">
+          <EntitySet Name="CSGOVideoConfiguration" EntityType="Self.CSGOVideoConfiguration" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GoTSkillZCSGOVideoConfigurationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CSGOVideoConfiguration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="ColorMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Brightness" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AspectRatio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Resolution" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LaptopPowerSavings" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GlobalShadowQuality" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModelTextureDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EffectDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShaderDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MultiCoreRendering" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MultisamplingAntiAliasingMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FXXAAAnti_Aliasing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TextureFilteringMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WaitForVerticalSync" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MotionBlur" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TripleMonitorMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="GameView" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="GoTSkillZCSGOVideoConfigurationEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CSGOVideoConfigurations" EntityType="Self.CSGOVideoConfiguration" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GoTSkillZCSGOVideoConfigurationModelStoreContainer" CdmEntityContainer="GoTSkillZCSGOVideoConfigurationEntities">
+          <EntitySetMapping Name="CSGOVideoConfigurations">
+            <EntityTypeMapping TypeName="GoTSkillZCSGOVideoConfigurationModel.CSGOVideoConfiguration">
+              <MappingFragment StoreEntitySet="CSGOVideoConfiguration">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ColorMode" ColumnName="ColorMode" />
+                <ScalarProperty Name="Brightness" ColumnName="Brightness" />
+                <ScalarProperty Name="AspectRatio" ColumnName="AspectRatio" />
+                <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+                <ScalarProperty Name="DisplayMode" ColumnName="DisplayMode" />
+                <ScalarProperty Name="LaptopPowerSavings" ColumnName="LaptopPowerSavings" />
+                <ScalarProperty Name="GlobalShadowQuality" ColumnName="GlobalShadowQuality" />
+                <ScalarProperty Name="ModelTextureDetail" ColumnName="ModelTextureDetail" />
+                <ScalarProperty Name="EffectDetail" ColumnName="EffectDetail" />
+                <ScalarProperty Name="ShaderDetail" ColumnName="ShaderDetail" />
+                <ScalarProperty Name="MultiCoreRendering" ColumnName="MultiCoreRendering" />
+                <ScalarProperty Name="MultisamplingAntiAliasingMode" ColumnName="MultisamplingAntiAliasingMode" />
+                <ScalarProperty Name="FXXAAAnti_Aliasing" ColumnName="FXXAAAnti-Aliasing" />
+                <ScalarProperty Name="TextureFilteringMode" ColumnName="TextureFilteringMode" />
+                <ScalarProperty Name="WaitForVerticalSync" ColumnName="WaitForVerticalSync" />
+                <ScalarProperty Name="MotionBlur" ColumnName="MotionBlur" />
+                <ScalarProperty Name="TripleMonitorMode" ColumnName="TripleMonitorMode" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="GameView" ColumnName="GameView" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

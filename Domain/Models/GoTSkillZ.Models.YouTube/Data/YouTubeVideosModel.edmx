@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="YouTubeVideosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="YouTubeVideos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlaylistId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="VideoId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="VideoTitle" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="VideoDescription" Type="nvarchar(max)" />
+          <Property Name="DefaultThumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="MediumThumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="HighThumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="Standardthumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="MaxThumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="ChannelId" Type="nvarchar(max)" />
+          <Property Name="VideoCreatedDate" Type="datetime" />
+          <Property Name="IsDisplayed" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="YouTubeVideosModelStoreContainer">
+          <EntitySet Name="YouTubeVideos" EntityType="Self.YouTubeVideos" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="YouTubeVideosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="YouTubeVideo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlaylistId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VideoId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VideoTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VideoDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultThumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MediumThumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HighThumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Standardthumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MaxThumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ChannelId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VideoCreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDisplayed" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="GoTSkillZYouTubeVideosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="YouTubeVideos" EntityType="Self.YouTubeVideo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="YouTubeVideosModelStoreContainer" CdmEntityContainer="GoTSkillZYouTubeVideosEntities">
+          <EntitySetMapping Name="YouTubeVideos">
+            <EntityTypeMapping TypeName="YouTubeVideosModel.YouTubeVideo">
+              <MappingFragment StoreEntitySet="YouTubeVideos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PlaylistId" ColumnName="PlaylistId" />
+                <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+                <ScalarProperty Name="VideoTitle" ColumnName="VideoTitle" />
+                <ScalarProperty Name="VideoDescription" ColumnName="VideoDescription" />
+                <ScalarProperty Name="DefaultThumbnail" ColumnName="DefaultThumbnail" />
+                <ScalarProperty Name="MediumThumbnail" ColumnName="MediumThumbnail" />
+                <ScalarProperty Name="HighThumbnail" ColumnName="HighThumbnail" />
+                <ScalarProperty Name="Standardthumbnail" ColumnName="Standardthumbnail" />
+                <ScalarProperty Name="MaxThumbnail" ColumnName="MaxThumbnail" />
+                <ScalarProperty Name="ChannelId" ColumnName="ChannelId" />
+                <ScalarProperty Name="VideoCreatedDate" ColumnName="VideoCreatedDate" />
+                <ScalarProperty Name="IsDisplayed" ColumnName="IsDisplayed" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

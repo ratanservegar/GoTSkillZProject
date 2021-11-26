@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79AEA9B6-7CB8-49C2-8599-1F16B91E4F39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoTSkillZ.Models.Game</RootNamespace>
+    <AssemblyName>GoTSkillZ.Models.Game</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Prod\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\GamePlatformConnectivity.cs">
+      <DependentUpon>GoTSkillZGamePlatformConnectivityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GameRoles.cs">
+      <DependentUpon>GoTSkillZGameRolesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GameType.cs">
+      <DependentUpon>GoTSkillZGameTypesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGamePlatformConnectivityEntities.cs" />
+    <Compile Include="Data\GoTSkillZGamePlatformConnectivityModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGamePlatformConnectivityModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGamePlatformConnectivityModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGamePlatformConnectivityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGamePlatformConnectivityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGamePlatformConnectivityModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGameRoleEntities.cs" />
+    <Compile Include="Data\GoTSkillZGameRolesModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGameRolesModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGameRolesModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGameRolesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGameRolesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGameRolesModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGameTypeEntities.cs" />
+    <Compile Include="Data\GoTSkillZGameTypesModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGameTypesModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGameTypesModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGameTypesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZGameTypesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZGameTypesModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IGamePlatformConnectivityProvider.cs" />
+    <Compile Include="Interfaces\IGameRolesProvider.cs" />
+    <Compile Include="Interfaces\IGameTypesProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\GamePlatformConnectivityProvider.cs" />
+    <Compile Include="Provider\GameRolesProvider.cs" />
+    <Compile Include="Provider\GameTypesProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataUtilities\GoTSkillZ.DataUtilities.Core\GoTSkillZ.DataUtilities.Core.csproj">
+      <Project>{604cdcaa-73d1-4e49-8d6f-beb3442349e1}</Project>
+      <Name>GoTSkillZ.DataUtilities.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Data\GoTSkillZGameTypesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GoTSkillZGameTypesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Data\GoTSkillZGameRolesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GoTSkillZGameRolesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Data\GoTSkillZGamePlatformConnectivityModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GoTSkillZGamePlatformConnectivityModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\GoTSkillZGamePlatformConnectivityModel.edmx.diagram">
+      <DependentUpon>GoTSkillZGamePlatformConnectivityModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\GoTSkillZGameRolesModel.edmx.diagram">
+      <DependentUpon>GoTSkillZGameRolesModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\GoTSkillZGameTypesModel.edmx.diagram">
+      <DependentUpon>GoTSkillZGameTypesModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\GoTSkillZGamePlatformConnectivityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZGamePlatformConnectivityModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZGamePlatformConnectivityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZGamePlatformConnectivityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZGamePlatformConnectivityModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZGamePlatformConnectivityModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZGameRolesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZGameRolesModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZGameRolesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZGameRolesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZGameRolesModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZGameRolesModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZGameTypesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZGameTypesModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZGameTypesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZGameTypesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZGameTypesModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZGameTypesModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

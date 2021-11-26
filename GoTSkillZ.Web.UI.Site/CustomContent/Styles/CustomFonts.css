@@ -1,0 +1,175 @@
+﻿
+@font-face {
+    font-family: 'icomoon';
+    src: url('../../CustomContent/Font/icomoon.eot?klcgpr');
+    src: url('../../CustomContent/Font/icomoon.eot?klcgpr#iefix') format('embedded-opentype'), url('../../CustomContent/Font/icomoon.ttf?klcgpr') format('truetype'), url('../../CustomContent/Font/icomoon.woff?klcgpr') format('woff'), url('../../CustomContent/Font/icomoon.svg?klcgpr#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.icon-phone-svgrepo-com:before {
+  content: "\e930";
+}
+.icon-game-console-svgrepo-com:before {
+  content: "\e931";
+}
+.icon-urban-skateboard-svgrepo-com:before {
+  content: "\e90d";
+}
+.icon-network-server-svgrepo-com:before {
+  content: "\e90e";
+}
+.icon-switch-svgrepo-com:before {
+  content: "\e90f";
+}
+.icon-speakers-svgrepo-com:before {
+  content: "\e910";
+}
+.icon-joystick-svgrepo-com-1:before {
+  content: "\e911";
+}
+.icon-control-panel-svgrepo-com:before {
+  content: "\e912";
+}
+.icon-console-mixer-svgrepo-com:before {
+  content: "\e913";
+}
+.icon-dslr-camera-svgrepo-com:before {
+  content: "\e914";
+}
+.icon-webcam-svgrepo-com-1:before {
+  content: "\e915";
+}
+.icon-leash-svgrepo-com:before {
+  content: "\e916";
+}
+.icon-striped-stick-of-yard-svgrepo-com:before {
+  content: "\e917";
+}
+.icon-usb-svgrepo-com-1:before {
+  content: "\e918";
+}
+.icon-projector-svgrepo-com:before {
+  content: "\e919";
+}
+.icon-television-tv-svgrepo-com:before {
+  content: "\e91a";
+}
+.icon-wifi-modem-svgrepo-com:before {
+  content: "\e91b";
+}
+.icon-sound-bar-with-stick-svgrepo-com:before {
+  content: "\e91c";
+}
+.icon-wifi-router-svgrepo-com:before {
+  content: "\e91d";
+}
+.icon-fishing-rod-fisher-svgrepo-com:before {
+  content: "\e91e";
+}
+.icon-desk-microphone-svgrepo-com:before {
+  content: "\e91f";
+}
+.icon-video-camera-svgrepo-com:before {
+  content: "\e920";
+}
+.icon-laptop-svgrepo-com:before {
+  content: "\e921";
+}
+.icon-sound-system-svgrepo-com:before {
+  content: "\e922";
+}
+.icon-bungee-svgrepo-com:before {
+  content: "\e923";
+}
+.icon-night-miscellaneous-svgrepo-com:before {
+  content: "\e924";
+}
+.icon-usb-port-svgrepo-com:before {
+  content: "\e925";
+}
+.icon-turntable-svgrepo-com:before {
+  content: "\e926";
+}
+.icon-charging-battery-svgrepo-com-1:before {
+  content: "\e927";
+}
+.icon-fabric-material-svgrepo-com-1:before {
+  content: "\e928";
+}
+.icon-monitor-svgrepo-com:before {
+  content: "\e929";
+}
+.icon-headphones-with-microphone-svgrepo-com:before {
+  content: "\e92a";
+}
+.icon-keyboard-svgrepo-com:before {
+  content: "\e92b";
+}
+.icon-school-computer-mouse-svgrepo-com:before {
+  content: "\e92c";
+}
+.icon-sound-card-svgrepo-com:before {
+  content: "\e92d";
+}
+.icon-pci-card-network-svgrepo-com:before {
+  content: "\e92e";
+}
+.icon-computer-fan-square-tool-svgrepo-com:before {
+  content: "\e92f";
+}
+.icon-ezgifcom-gif-maker:before {
+  content: "\e90c";
+}
+.icon-sostronk:before {
+  content: "\e90a";
+}
+.icon-MixerMerge_Black:before {
+  content: "\e90b";
+}
+.icon-Black_Pheasant:before {
+  content: "\e909";
+}
+.icon-film-roler-svgrepo-com:before {
+  content: "\e901";
+}
+.icon-team-leader-svgrepo-com:before {
+  content: "\e902";
+}
+.icon-computer-cases-svgrepo-com:before {
+  content: "\e903";
+}
+.icon-cpu-processor-svgrepo-com:before {
+  content: "\e904";
+}
+.icon-ssd-svgrepo-com-1:before {
+  content: "\e905";
+}
+.icon-ram-memory-svgrepo-com:before {
+  content: "\e906";
+}
+.icon-ca884ca8-4c9a-11e8-8c94-9129323979c7:before {
+  content: "\e900";
+}
+.icon-memory:before {
+  content: "\e907";
+}
+.icon-memory1:before {
+  content: "\e908";
+}

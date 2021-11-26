@@ -1,0 +1,751 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GoTSkillZ.Web.UI.Site.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="M9bVnBY3RJ6nmnXam16W-3NX8OcxoMfEkfM_dXSWiL8"/>
+    <title>GotSkillZ? - <%: Page.Title %></title>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css"/>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:400,700" rel="stylesheet">
+
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/frameworks") %>
+        <%: Scripts.Render("~/bundles/Auth") %>
+        <%: Scripts.Render("~/bundles/core") %>
+    </asp:PlaceHolder>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(),
+                event: 'gtm.js'
+            });
+            const f = d.getElementsByTagName(s)[0];
+            const j = d.createElement(s);
+            const dl = l != 'dataLayer' ? `&l=${l}` : '';
+            j.async = true;
+            j.src =
+                `https://www.googletagmanager.com/gtm.js?id=${i}${dl}`;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5TGLWG3');
+
+
+
+        var currentSubCount =  <%=  Newtonsoft.Json.JsonConvert.SerializeObject(Session["CurrentSubCount"]) %>;
+        var isLiveStreamOn = <%=  Newtonsoft.Json.JsonConvert.SerializeObject(Session["IsLive"]) %>;
+        var loadingMessages = <%=  Newtonsoft.Json.JsonConvert.SerializeObject(Session["LoadingMessages"]) %>;
+        var RecentYouTubeSubscribers = <%=  Newtonsoft.Json.JsonConvert.SerializeObject(Session["RecentYouTubeSubscribers"]) %>;
+        var recentDonations = <%=  Newtonsoft.Json.JsonConvert.SerializeObject(Session["RecentDonations"]) %>;
+        var newSiteUsers =  <%=  Newtonsoft.Json.JsonConvert.SerializeObject(Session["NewSiteUsers"]) %>;
+      
+      
+
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TGLWG3"
+            height="0" width="0" style="display: none; visibility: hidden">
+    </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<form runat="server">
+<asp:HiddenField ID="hdnPageName" runat="server" Value=""/>
+<asp:HiddenField ID="hdnUserId" runat="server" Value=""/>
+
+
+
+
+<asp:ScriptManager runat="server" AjaxFrameworkMode="Disabled" ScriptMode="Release">
+    <CompositeScript ScriptMode="Release">
+        <Scripts>
+            <asp:ScriptReference Name="bootstrap"/>
+            <asp:ScriptReference Name="respond"/>
+        </Scripts>
+    </CompositeScript>
+</asp:ScriptManager>
+
+
+<%--Site Header and Layout--%>
+<!-- ########## START: LEFT PANEL ########## -->
+<div class="br-logo ">
+    <a href="/">
+        <ul class="text-logo-ani">
+            <li>
+                <span>[</span>
+            </li>
+            <li>G</li>
+            <li class="ghost">o</li>
+            <li class="ghost">T</li>
+            <li class="spaced">
+                <i>S</i>
+            </li>
+            <li class="ghost">
+                <i>k</i>
+            </li>
+            <li class="ghost">
+                <i>i</i>
+            </li>
+            <li class="ghost">
+                <i>l</i>
+            </li>
+            <li class="ghost">
+                <i>l</i>
+            </li>
+            <li class="ghost">
+                <i>Z</i>
+            </li>
+            <li class="ghost">
+                <i>?</i>
+            </li>
+            <li>
+                <span>]</span>
+            </li>
+        </ul>
+
+    </a>
+</div>
+<div class="br-sideleft sideleft-scrollbar">
+    <br/>
+    <ul id="root-menu" class="br-sideleft-menu">
+    </ul>
+    <!-- br-sideleft-menu -->
+    <br>
+</div>
+<!-- br-sideleft -->
+<!-- ########## END: LEFT PANEL ########## -->
+
+<!-- ########## START: HEAD PANEL ########## -->
+<div class="br-header">
+<div class="br-header-left">
+    <div class="navicon-left hidden-md-down">
+        <a id="btnLeftMenu" href="">
+            <i class="icon ion-navicon-round"></i>
+        </a>
+    </div>
+    <div class="navicon-left hidden-lg-up">
+        <a id="btnLeftMenuMobile" href="">
+            <i class="icon ion-navicon-round"></i>
+        </a>
+    </div>
+
+</div>
+<!-- br-header-left -->
+<div class="br-header-right">
+    <nav class="nav">
+        <%--                    <div id="header-message" class="dropdown" style="display: none;">--%>
+        <%--                        <a href="" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">--%>
+        <%--                            <i class="icon ion-ios-email-outline tx-24"></i>--%>
+        <%--                            <!-- start: if statement -->--%>
+        <%--                            <span class="square-8 bg-danger pos-absolute t-15 r-0 rounded-circle"></span>--%>
+        <%--                            <!-- end: if statement -->--%>
+        <%--                        </a>--%>
+        <%--                        <div class="dropdown-menu dropdown-menu-header">--%>
+        <%--                            <div class="dropdown-menu-label">--%>
+        <%--                                <label>Messages</label>--%>
+        <%--                                <a href="">+ Add New Message</a>--%>
+        <%--                            </div>--%>
+        <%--                            <!-- d-flex -->--%>
+        <%--                            <div class="media-list">--%>
+        <%--                                <!-- loop starts here -->--%>
+        <%--                                <a href="" class="media-list-link">--%>
+        <%--                                    <div class="media">--%>
+        <%--                                        <img src="/CustomContent/Images/500.png" alt="">--%>
+        <%--                                        <div class="media-body">--%>
+        <%--                                            <div>--%>
+        <%--                                                <p>Donna Seay</p>--%>
+        <%--                                                <span>2 minutes ago</span>--%>
+        <%--                                            </div>--%>
+        <%--                                            <!-- d-flex -->--%>
+        <%--                                            <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring.</p>--%>
+        <%--                                        </div>--%>
+        <%--                                    </div>--%>
+        <%--                                    <!-- media -->--%>
+        <%--                                </a>--%>
+        <%--                                <!-- loop ends here -->--%>
+        <%--                                <a href="" class="media-list-link read">--%>
+        <%--                                    <div class="media">--%>
+        <%--                                        <img src="/CustomContent/Images/500.png" alt="">--%>
+        <%--                                        <div class="media-body">--%>
+        <%--                                            <div>--%>
+        <%--                                                <p>Samantha Francis</p>--%>
+        <%--                                                <span>3 hours ago</span>--%>
+        <%--                                            </div>--%>
+        <%--                                            <!-- d-flex -->--%>
+        <%--                                            <p>My entire soul, like these sweet mornings of spring.</p>--%>
+        <%--                                        </div>--%>
+        <%--                                    </div>--%>
+        <%--                                    <!-- media -->--%>
+        <%--                                </a>--%>
+        <%--                                <a href="" class="media-list-link read">--%>
+        <%--                                    <div class="media">--%>
+        <%--                                        <img src="/CustomContent/Images/500.png" alt="">--%>
+        <%--                                        <div class="media-body">--%>
+        <%--                                            <div>--%>
+        <%--                                                <p>Robert Walker</p>--%>
+        <%--                                                <span>5 hours ago</span>--%>
+        <%--                                            </div>--%>
+        <%--                                            <!-- d-flex -->--%>
+        <%--                                            <p>I should be incapable of drawing a single stroke at the present moment...</p>--%>
+        <%--                                        </div>--%>
+        <%--                                    </div>--%>
+        <%--                                    <!-- media -->--%>
+        <%--                                </a>--%>
+        <%--                                <a href="" class="media-list-link read">--%>
+        <%--                                    <div class="media">--%>
+        <%--                                        <img src="/CustomContent/Images/500.png" alt="">--%>
+        <%--                                        <div class="media-body">--%>
+        <%--                                            <div>--%>
+        <%--                                                <p>Larry Smith</p>--%>
+        <%--                                                <span>Yesterday</span>--%>
+        <%--                                            </div>--%>
+        <%--                                            <!-- d-flex -->--%>
+        <%--                                            <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes...</p>--%>
+        <%--                                        </div>--%>
+        <%--                                    </div>--%>
+        <%--                                    <!-- media -->--%>
+        <%--                                </a>--%>
+        <%--                                <div class="dropdown-footer">--%>
+        <%--                                    <a href=""><i class="fa fa-angle-down"></i>Show All Messages</a>--%>
+        <%--                                </div>--%>
+        <%--                            </div>--%>
+        <%--                            <!-- media-list -->--%>
+        <%--                        </div>--%>
+        <%--                        <!-- dropdown-menu -->--%>
+        <%--                    </div>--%>
+        <%--                    <!-- dropdown -->--%>
+        <%--                    <div id="header-notification" class="dropdown" style="display: none;">--%>
+        <%--                        <a href="" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">--%>
+        <%--                            <i class="icon ion-ios-bell-outline tx-24"></i>--%>
+        <%--                            <!-- start: if statement -->--%>
+        <%--                            <span class="square-8 bg-danger pos-absolute t-15 r-5 rounded-circle"></span>--%>
+        <%--                            <!-- end: if statement -->--%>
+        <%--                        </a>--%>
+        <%--                        <div class="dropdown-menu dropdown-menu-header">--%>
+        <%--                            <div class="dropdown-menu-label">--%>
+        <%--                                <label>Notifications</label>--%>
+        <%--                                <a href="">Mark All as Read</a>--%>
+        <%--                            </div>--%>
+        <%--                            <!-- d-flex -->--%>
+        <%----%>
+        <%--                            <div class="media-list">--%>
+        <%--                                <!-- loop starts here -->--%>
+        <%--                                <a href="" class="media-list-link read">--%>
+        <%--                                    <div class="media">--%>
+        <%--                                        <img src="/CustomContent/Images/500.png" alt="">--%>
+        <%--                                        <div class="media-body">--%>
+        <%--                                            <p class="noti-text">--%>
+        <%--                                                <strong>Suzzeth Bungaos</strong> tagged you and 18 others in a post.--%>
+        <%--                                            </p>--%>
+        <%--                                            <span>October 03, 2017 8:45am</span>--%>
+        <%--                                        </div>--%>
+        <%--                                    </div>--%>
+        <%--                                    <!-- media -->--%>
+        <%--                                </a>--%>
+        <%--                                <!-- loop ends here -->--%>
+        <%--                                <a href="" class="media-list-link read">--%>
+        <%--                                    <div class="media">--%>
+        <%--                                        <img src="/CustomContent/Images/500.png" alt="">--%>
+        <%--                                        <div class="media-body">--%>
+        <%--                                            <p class="noti-text">--%>
+        <%--                                                <strong>Mellisa Brown</strong> appreciated your work <strong>The Social Network</strong>--%>
+        <%--                                            </p>--%>
+        <%--                                            <span>October 02, 2017 12:44am</span>--%>
+        <%--                                        </div>--%>
+        <%--                                    </div>--%>
+        <%--                                    <!-- media -->--%>
+        <%--                                </a>--%>
+        <%--                                <a href="" class="media-list-link read">--%>
+        <%--                                    <div class="media">--%>
+        <%--                                        <img src="/CustomContent/Images/500.png" alt="">--%>
+        <%--                                        <div class="media-body">--%>
+        <%--                                            <p class="noti-text">--%>
+        <%--                                                20+ new items added are for sale in your <strong>Sale Group</strong>--%>
+        <%--                                            </p>--%>
+        <%--                                            <span>October 01, 2017 10:20pm</span>--%>
+        <%--                                        </div>--%>
+        <%--                                    </div>--%>
+        <%--                                    <!-- media -->--%>
+        <%--                                </a>--%>
+        <%--                                <a href="" class="media-list-link read">--%>
+        <%--                                    <div class="media">--%>
+        <%--                                        <img src="/CustomContent/Images/500.png" alt="">--%>
+        <%--                                        <div class="media-body">--%>
+        <%--                                            <p class="noti-text">--%>
+        <%--                                                <strong>Julius Erving</strong> wants to connect with you on your conversation with <strong>Ronnie Mara</strong>--%>
+        <%--                                            </p>--%>
+        <%--                                            <span>October 01, 2017 6:08pm</span>--%>
+        <%--                                        </div>--%>
+        <%--                                    </div>--%>
+        <%--                                    <!-- media -->--%>
+        <%--                                </a>--%>
+        <%--                                <div class="dropdown-footer">--%>
+        <%--                                    <a href=""><i class="fa fa-angle-down"></i>Show All Notifications</a>--%>
+        <%--                                </div>--%>
+        <%--                            </div>--%>
+        <%--                            <!-- media-list -->--%>
+        <%--                        </div>--%>
+        <%--                        <!-- dropdown-menu -->--%>
+        <%--                    </div>--%>
+        <!-- dropdown -->
+        <div class="dropdown" id="user-header-profile" style="display: none;">
+            <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+                <span id="logged-fullname-header" class="logged-name hidden-md-down">Login</span>
+                <img id="header-profile-image" src="/CustomContent/Images/profile-image.png" class="wd-32 ht-32 rounded-circle" alt="">
+            </a>
+            <div class="dropdown-menu dropdown-menu-header wd-250">
+                <div class="tx-center">
+                    <a href="/User/Profile.aspx">
+                        <img id="menu-profileimage" src="/CustomContent/Images/profile-image.png" class="wd-80 ht-80 rounded-circle" alt="">
+                    </a>
+                    <h6 id="logged-fullname-menu" class="logged-fullname">GoTSkillZ?</h6>
+                    <p id="logged-email"></p>
+                </div>
+                <hr>
+                <ul class="list-unstyled user-profile-nav">
+                    <li>
+                        <a href="/User/Profile.aspx"><i class="icon ion-ios-person"></i>Edit Profile</a>
+                    </li>
+                    <li>
+                        <a href="#" id="revoke-btn"><i class="icon  ion-refresh"></i>Revoke Access</a>
+                    </li>
+                    <li>
+                        <a id="sign-out-btn" href="#"><i class="icon ion-power"></i>Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- dropdown-menu -->
+        </div>
+        <!-- dropdown -->
+    </nav>
+    <%--sign in button--%>
+    <div id="header-login-btn" class="navicon-right">
+        <a href="#" class="nav-link pd-x-7 pos-relative">
+            <i class="ionicons ion-log-in tx-32 "></i>
+        </a>
+    </div>
+    <%--sign in button--%>
+    <div id="right-setting-icon" class="navicon-right" style="display: none;">
+        <a id="btnRightMenu" href="" class="pos-relative">
+            <i class="icon ion-ios-gear-outline"></i>
+        </a>
+    </div>
+    <!-- navicon-right -->
+</div>
+<!-- br-header-right -->
+</div>
+<!-- br-header -->
+<!-- ########## END: HEAD PANEL ########## -->
+
+
+<!-- ########## START: RIGHT PANEL ########## -->
+<div class="br-sideright">
+    <ul class="nav nav-tabs sidebar-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" role="tab" href="#attachments">
+                <i class="icon ion-ios-folder-outline tx-22"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" role="tab" href="#calendar">
+                <i class="icon ion-ios-calendar-outline tx-24"></i>
+            </a>
+        </li>
+        <li class="nav-item " id="quick-settings" style="display: none;">
+            <a class="nav-link " data-toggle="tab" role="tab" href="#settings">
+                <i class="icon ion-ios-gear-outline tx-24"></i>
+            </a>
+        </li>
+    </ul>
+    <!-- sidebar-tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane pos-absolute a-0 mg-t-60 attachment-scrollbar active" id="attachments" role="tabpanel">
+            <label class="sidebar-label pd-x-25 mg-t-25">Config Files</label>
+            <div class="media-file-list" id="config-container">
+                <%--                        <div class="media  mg-t-20">--%>
+                <%--                            <div class="pd-10 bg-gray-500 bg-reef wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">--%>
+                <%--                                <i class="far fas fa-download tx-28 tx-white"></i>--%>
+                <%--                            </div>--%>
+                <%----%>
+                <%--                            <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">--%>
+                <%--                                <p class="mg-b-0 tx-13" id="quick-down-name">IMG_43445</p>--%>
+                <%--                                <p class="mg-b-0 tx-12 op-5" id="quick-down-date">JPG Image</p>--%>
+                <%--                                <p class="mg-b-0 tx-12 op-5" id="quick-down-size">1.2mb</p>--%>
+                <%--                            </div>--%>
+                <%--                            <!-- media-body -->--%>
+                <%--                        </div>--%>
+                <!-- media -->
+            </div>
+            <!-- media-list -->
+        </div>
+        <!-- #history -->
+        <div class="tab-pane pos-absolute a-0 mg-t-60 schedule-scrollbar" id="calendar" role="tabpanel">
+            <label class="sidebar-label pd-x-25 mg-t-25">Time &amp; Date</label>
+            <div class="pd-x-25">
+                <h2 id="brTime" class="br-time"></h2>
+                <h6 id="brDate" class="br-date"></h6>
+            </div>
+
+            <label class="sidebar-label pd-x-25 mg-t-25">Events Calendar</label>
+            <div class="datepicker sidebar-datepicker"></div>
+
+
+            <label class="sidebar-label pd-x-25 mg-t-25">Event Today</label>
+            <h4>COMING SOON.</h4>
+            <%--                    <div class="pd-x-25">--%>
+            <%--                        <div class="list-group sidebar-event-list mg-b-20">--%>
+            <%--                            <div class="list-group-item">--%>
+            <%--                                <div>--%>
+            <%--                                    <h6 class="tx-white tx-13 mg-b-5 tx-normal">Roven's 32th Birthday</h6>--%>
+            <%--                                    <p class="mg-b-0 tx-gray-600 tx-12">2:30PM</p>--%>
+            <%--                                </div>--%>
+            <%--                                <a href="" class="more">--%>
+            <%--                                    <i class="icon ion-android-more-vertical tx-18"></i>--%>
+            <%--                                </a>--%>
+            <%--                            </div>--%>
+            <%--                            <!-- list-group-item -->--%>
+            <%--                            <div class="list-group-item">--%>
+            <%--                                <div>--%>
+            <%--                                    <h6 class="tx-white tx-13 mg-b-5 tx-normal">Regular Workout Schedule</h6>--%>
+            <%--                                    <p class="mg-b-0 tx-gray-600 tx-12">7:30PM</p>--%>
+            <%--                                </div>--%>
+            <%--                                <a href="" class="more">--%>
+            <%--                                    <i class="icon ion-android-more-vertical tx-18"></i>--%>
+            <%--                                </a>--%>
+            <%--                            </div>--%>
+            <%--                            <!-- list-group-item -->--%>
+            <%--                        </div>--%>
+            <%--                        <!-- list-group -->--%>
+            <%----%>
+            <%--                        <a href="" class="btn btn-block btn-primary tx-uppercase tx-10 tx-mont tx-semibold">+ Add Event</a>--%>
+            <%--                        <br>--%>
+            <%--                    </div>--%>
+        </div>
+        <div class="tab-pane pos-absolute a-0 mg-t-60 settings-scrollbar" id="settings" role="tabpanel">
+            <label class="sidebar-label pd-x-25 mg-t-25">Quick Settings</label>
+            <div class="sidebar-settings-item">
+                <h6 class="tx-13 tx-normal">Sync Channel Stats & Sub List</h6>
+                <a href="#" id="sync-youtube-data" class="btn btn-danger btn-icon mg-r-5 mg-b-10">
+                    <div>
+                        <i class="fa fa-sync"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-settings-item">
+                <h6 class="tx-13 tx-normal">Sync Playlist & Videos</h6>
+                <a href="#" id="sync-playlist-data" class="btn btn-danger btn-icon mg-r-5 mg-b-10">
+                    <div>
+                        <i class="fa fa-sync"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-settings-item">
+                <h6 class="tx-13 tx-normal">Sync SuperChat</h6>
+                <a href="#" id="sync-superchat-data" class="btn btn-danger btn-icon mg-r-5 mg-b-10">
+                    <div>
+                        <i class="fa fa-sync"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-settings-item">
+                <h6 class="tx-13 tx-normal">YouTube Live Stream</h6>
+                <input type="checkbox" id="youtubeIsLive" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-on="Live" data-off="Not Live" data-size="lg">
+            </div>
+        </div>
+    </div>
+    <!-- tab-content -->
+</div>
+<!-- br-sideright -->
+<!-- ########## END: RIGHT PANEL ########## --->
+
+
+<%--page content goes in here--%>
+<div class="container-fluid">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+    </asp:ContentPlaceHolder>
+</div>
+
+</form>
+
+
+<!-- modals -->
+<!-- small modal-->
+<div id="small-modal" class="modal fade effect-sign">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content bd-0">
+            <div class="modal-header pd-x-20">
+                <h6 class="modal-title  tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold"></h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pd-20">
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" id="small-modal-cancel-btn" class="btn btn-secondary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-semibold" data-dismiss="modal">Cancel</button>
+                <button type="button" id="small-modal-submit-btn" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-semibold">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- large modal-->
+<div id="large-modal" class="modal fade effect-sign">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header pd-y-20 pd-x-25">
+                <h6 class="modal-title tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold"></h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pd-25">
+            </div>
+            <!-- modal-body -->
+            <div class="modal-footer">
+                <button type="button" id="large-modal-cancel-btn" class="btn btn-secondary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-semibold" data-dismiss="modal">Cancel</button>
+                <button type="button" id="large-modal-submit-btn" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-semibold">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Loading modal-->
+<div id="loading-modal" class="modal fade effect-just-me" style="background-color: black;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body pd-25 mg-t-100 t-100">
+                <div class="d-flex bg-black-1  pos-relative align-items-center">
+                    <div class="sk-folding-cube">
+                        <div class="sk-cube1 sk-cube"></div>
+                        <div class="sk-cube2 sk-cube"></div>
+                        <div class="sk-cube4 sk-cube"></div>
+                        <div class="sk-cube3 sk-cube"></div>
+                    </div>
+                </div>
+                <div id="loading-text" class="align-items-center">
+                    <h3 id="loading-quote" class="tx-xl-xthin tx-spacing-8" style="text-align: center; vertical-align: middle;"></h3>
+                    <h3 id="loading-sub" class="tx-xl-xthin tx-spacing-8 pd-r-120" style="float: right; text-align: center; vertical-align: middle;"></h3>
+                </div>
+            </div>
+            <!-- modal-body -->
+        </div>
+    </div>
+</div>
+<!-- Sign in modal-->
+<div id="sign-in-modal" class="modal fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered wd-350" role="document">
+        <div class="modal-content bd-0  bg-black-9 rounded overflow-hidden">
+            <div class="modal-body pd-0">
+                <div class="row no-gutters d-flex align-items-center justify-content-center">
+                    <div class="login-wrapper wd-300 wd-xs-350 pd-20 pd-xs-20 rounded bg-black-6 ht-400">
+                        <div class="signin-logo tx-center tx-28 tx-bold tx-white"><span class="tx-teal">[</span> GoT <span class="tx-teal">SkillZ?</span> <span class="tx-teal">]</span></div>
+                        <div class="tx-white-5 tx-center mg-b-30">Do you?</div>
+                        <div class="btn btn-block pd-t-30 " id="googleLoginBtn">
+                            <a href="#" class="tx-bold tx-white" style="text-transform: none">
+                                <div class="left">
+                                    <img width="30" alt="Google &quot;G&quot; Logo" src="/CustomContent/Images/google.png"/>
+                                </div>
+                                Login with Google
+                            </a>
+                        </div>
+                        <p id="enable-cookie-msg" style="color: red; display: none; font-weight: bold;">**Cookies Are Disabled, Please Enable 3rd Party Cookies In Your Browser & Refresh The Page To Login with Google** Click <a href="https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DAndroid&hl=en" target="_blank"  rel="noopener">Here</a> To Learn More.</p>
+                        <p class="pd-t-50 ">
+                            By Signing in you agree to our <a href="/Agreements/TermsAndConditions.aspx" class="tx-info" target="_blank">Terms</a> and that you have read our <a href="/Agreements/Privacy.aspx" class="tx-info" target="_blank">Privacy Policy and Content Policy</a>.
+                        </p>
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- modal-body -->
+        </div>
+        <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+</div>
+
+<!-- Revoke modal-->
+<div id="revoke-modal" class="modal fade effect-sign">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header pd-y-20 pd-x-25">
+                <h6 class="modal-title tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Revoke YouTube Access</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pd-25">
+                <h3>Revoking Access Will Prevent You From Accessing Pages/Features On GoTSkillZ.GG, Are You Sure?</h3>
+            </div>
+            <!-- modal-body -->
+            <div class="modal-footer">
+                <button type="button" id="revoke-modal-cancel-btn" class="btn btn-secondary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-semibold" data-dismiss="modal">Cancel</button>
+                <button type="button" id="revoke-modal-submit-btn" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-semibold">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Signing in modal-->
+<div id="signing-in-modal" class="modal fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered wd-350" role="document">
+        <div class="modal-content bd-0  bg-black-9 rounded overflow-hidden">
+            <div class="modal-body pd-0">
+                <div class="row no-gutters d-flex align-items-center justify-content-center">
+                    <div class="login-wrapper wd-300 wd-xs-350 pd-20 pd-xs-20 rounded bg-black-6 ht-400">
+                        <div class="signin-logo tx-center tx-28 tx-bold tx-white"><span class="tx-teal">[</span> GoT <span class="tx-teal">SkillZ?</span> <span class="tx-teal">]</span></div>
+                        <div class="tx-white-5 tx-center mg-b-30">Do you?</div>
+                        <div class="btn btn-block pd-t-30 " id="pleasewait">
+                            <div class="sk-circle">
+                                <div class="sk-circle1 sk-child"></div>
+                                <div class="sk-circle2 sk-child"></div>
+                                <div class="sk-circle3 sk-child"></div>
+                                <div class="sk-circle4 sk-child"></div>
+                                <div class="sk-circle5 sk-child"></div>
+                                <div class="sk-circle6 sk-child"></div>
+                                <div class="sk-circle7 sk-child"></div>
+                                <div class="sk-circle8 sk-child"></div>
+                                <div class="sk-circle9 sk-child"></div>
+                                <div class="sk-circle10 sk-child"></div>
+                                <div class="sk-circle11 sk-child"></div>
+                                <div class="sk-circle12 sk-child"></div>
+                            </div>
+                        </div>
+                        <div class="tx-white-5 tx-center mg-b-30">Signing in.. Please wait...</div>
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- modal-body -->
+        </div>
+        <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+</div>
+
+<!-- Subscribe modal-->
+
+<div id="subscribe-modal" class="modal fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered wd-auto" role="document">
+        <div class="modal-content bd-0  bg-black-9 rounded overflow-hidden">
+            <div class="modal-body pd-0">
+                <div class="row no-gutters d-flex align-items-center justify-content-center">
+                    <div class="login-wrapper wd-300 wd-xs-350 pd-20 pd-xs-20 rounded bg-black-6 ht-400">
+                        <div class="signin-logo tx-center tx-28 tx-bold tx-white"><span class="tx-teal">[</span> GoT <span class="tx-teal">SkillZ?</span> <span class="tx-teal">]</span></div>
+                        <div class="pd-t-20" style="text-align: center;">Please Subscribe<span class="tx-20">&#x1F64F;</span></div>
+                        <div style="margin-top: 10px; text-align: center; width: 100%;">
+                            <div class="g-ytsubscribe" data-channelid="UCdMrMjhgjEm7GJwQM-4Fn0w" data-layout="default" data-count="default" style="height: 25px !important; margin: 0px auto !important; padding: 10px !important; width: 127px !important;"></div>
+                        </div>
+                        <div class="pd-t-20 " style="text-align: center;">
+                            <h3>
+                                <b>Already Subscribed?<a href="/#" id="sub-refresh"> Click Here </a></b>
+                            </h3>
+                        </div>
+                        <div class="pd-t-20 " style="text-align: center;">Subscribing To My Channel Is Completely Upto You. If You Do Choose To Subscribe, Thank You <span class="tx-20 tx-danger ">&#x2764;</span> </div>
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- modal-body -->
+        </div>
+        <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+</div>
+
+
+<div class="alert text-center cookiealert" role="alert">
+    <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank"  rel="noopener">Learn more</a>
+
+    <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
+        I agree
+    </button>
+</div>
+
+<div class="br-mainpanel" style="margin-left: auto; margin-right: auto; max-width: 1150px;">
+    <footer id="footer-container" class="br-footer">
+        <div class="container">
+            <div class="row ">
+                <div class="col-sm-12">
+                    <div class="pd-l-30" style="float: left;">
+                        <div class="mg-b-2">Copyright &copy; 2019. GoTSkillZ?. All Rights Reserved.</div>
+                    </div>
+                    <div class="tx-right pd-r-30" style="float: right;">
+                        <a id="faq" href="/Footer/FAQ.aspx" class="tx-white-5 hover-info">
+                            FAQ
+                        </a>
+                        &nbsp;&nbsp;&#x2022; &nbsp;
+                        <a id="roadmap" href="/Footer/Roadmap.aspx" class="tx-white-5 hover-info">
+                            Road-map
+                        </a>
+                        &nbsp;&nbsp;&#x2022; &nbsp;
+                        <a id="privacy" href="/Agreements/Privacy.aspx" class="tx-white-5 hover-info mg-b-2">
+                            Privacy Policy
+                        </a>
+                        &nbsp;&nbsp;&#x2022; &nbsp;
+                        <a id="terms" href="/Agreements/TermsAndConditions.aspx" class="tx-white-5 hover-info">
+                            Terms
+                        </a>
+                        &nbsp;&nbsp;&#x2022; &nbsp;
+                        <a id="youtube-terms" href="https://www.youtube.com/t/terms?reload=9" target="_blank"  rel="noopener" class="tx-white-5 hover-info" >
+                            YouTube Terms Of Services
+                        </a>
+                        &nbsp;&nbsp;&#x2022; &nbsp;
+                        <a id="google-terms" href="https://policies.google.com/privacy" target="_blank"  rel="noopener" class="tx-white-5 hover-info">
+                            Google Privacy Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

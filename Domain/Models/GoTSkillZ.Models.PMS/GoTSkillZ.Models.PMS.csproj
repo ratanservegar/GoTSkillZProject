@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{973E8F7F-E43D-46B0-8211-9391ADDDABE3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoTSkillZ.Models.PMS</RootNamespace>
+    <AssemblyName>GoTSkillZ.Models.PMS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Prod\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\GoTSkillZLoadingMessagesEntities.cs" />
+    <Compile Include="Data\GoTSkillZPageEntities.cs" />
+    <Compile Include="Data\GoTSkillZPageRoleEntities.cs" />
+    <Compile Include="Data\GoTSkillZSitemapEntities.cs" />
+    <Compile Include="Data\LoadingMessages.cs">
+      <DependentUpon>LoadingMessagesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LoadingMessagesModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadingMessagesModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LoadingMessagesModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadingMessagesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LoadingMessagesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadingMessagesModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PageModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PageModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PageModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PageRole.cs">
+      <DependentUpon>PageRoleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PageRoleModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageRoleModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PageRoleModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageRoleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PageRoleModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageRoleModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Pages.cs">
+      <DependentUpon>PageModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SitemapModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SitemapModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SitemapModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SitemapModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SitemapModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SitemapModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Sitemaps.cs">
+      <DependentUpon>SitemapModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ILoadingMessagesProvider.cs" />
+    <Compile Include="Interfaces\IPageProvider.cs" />
+    <Compile Include="Interfaces\IPageRoleProvider.cs" />
+    <Compile Include="Interfaces\ISitemapProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\LoadingMessagesProvider.cs" />
+    <Compile Include="Providers\PageProvider.cs" />
+    <Compile Include="Providers\PageRoleProvider.cs" />
+    <Compile Include="Providers\SitemapProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataUtilities\GoTSkillZ.DataUtilities.Core\GoTSkillZ.DataUtilities.Core.csproj">
+      <Project>{604cdcaa-73d1-4e49-8d6f-beb3442349e1}</Project>
+      <Name>GoTSkillZ.DataUtilities.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="Data\PageModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PageModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Data\LoadingMessagesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LoadingMessagesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\LoadingMessagesModel.edmx.diagram">
+      <DependentUpon>LoadingMessagesModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\PageModel.edmx.diagram">
+      <DependentUpon>PageModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Data\SitemapModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SitemapModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Data\PageRoleModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PageRoleModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\PageRoleModel.edmx.diagram">
+      <DependentUpon>PageRoleModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\SitemapModel.edmx.diagram">
+      <DependentUpon>SitemapModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\LoadingMessagesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LoadingMessagesModel.edmx</DependentUpon>
+      <LastGenOutput>LoadingMessagesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\LoadingMessagesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LoadingMessagesModel.edmx</DependentUpon>
+      <LastGenOutput>LoadingMessagesModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\PageModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PageModel.edmx</DependentUpon>
+      <LastGenOutput>PageModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\PageModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PageModel.edmx</DependentUpon>
+      <LastGenOutput>PageModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\PageRoleModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PageRoleModel.edmx</DependentUpon>
+      <LastGenOutput>PageRoleModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\PageRoleModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PageRoleModel.edmx</DependentUpon>
+      <LastGenOutput>PageRoleModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\SitemapModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SitemapModel.edmx</DependentUpon>
+      <LastGenOutput>SitemapModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\SitemapModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SitemapModel.edmx</DependentUpon>
+      <LastGenOutput>SitemapModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

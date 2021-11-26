@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80DCED7D-0FC3-4160-ACD1-5FD08B14E458}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoTSkillZ.Models.CSGO</RootNamespace>
+    <AssemblyName>GoTSkillZ.Models.CSGO</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\CSGOSensitivity.cs">
+      <DependentUpon>GoTSkillZCSGOSensitivityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CSGOVideoConfiguration.cs">
+      <DependentUpon>GoTSkillZCSGOVideoConfigurationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZCSGOSensitivityEntities.cs" />
+    <Compile Include="Data\GoTSkillZCSGOSensitivityModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZCSGOSensitivityModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZCSGOSensitivityModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZCSGOSensitivityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZCSGOSensitivityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZCSGOSensitivityModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZCSGOVideoConfigurationEntities.cs" />
+    <Compile Include="Data\GoTSkillZCSGOVideoConfigurationModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZCSGOVideoConfigurationModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZCSGOVideoConfigurationModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZCSGOVideoConfigurationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GoTSkillZCSGOVideoConfigurationModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoTSkillZCSGOVideoConfigurationModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ICSGOSensitivityProvider.cs" />
+    <Compile Include="Interfaces\ICSGOVideoConfigurationProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\CSGOConfigurationProvider.cs" />
+    <Compile Include="Provider\CSGOSensitivityProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Data\GoTSkillZCSGOVideoConfigurationModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GoTSkillZCSGOVideoConfigurationModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Data\GoTSkillZCSGOSensitivityModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GoTSkillZCSGOSensitivityModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\GoTSkillZCSGOSensitivityModel.edmx.diagram">
+      <DependentUpon>GoTSkillZCSGOSensitivityModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\GoTSkillZCSGOVideoConfigurationModel.edmx.diagram">
+      <DependentUpon>GoTSkillZCSGOVideoConfigurationModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\GoTSkillZCSGOSensitivityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZCSGOSensitivityModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZCSGOSensitivityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZCSGOSensitivityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZCSGOSensitivityModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZCSGOSensitivityModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZCSGOVideoConfigurationModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZCSGOVideoConfigurationModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZCSGOVideoConfigurationModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GoTSkillZCSGOVideoConfigurationModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoTSkillZCSGOVideoConfigurationModel.edmx</DependentUpon>
+      <LastGenOutput>GoTSkillZCSGOVideoConfigurationModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataUtilities\GoTSkillZ.DataUtilities.Core\GoTSkillZ.DataUtilities.Core.csproj">
+      <Project>{604cdcaa-73d1-4e49-8d6f-beb3442349e1}</Project>
+      <Name>GoTSkillZ.DataUtilities.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

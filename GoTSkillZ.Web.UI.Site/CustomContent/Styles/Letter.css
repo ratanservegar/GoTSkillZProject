@@ -1,0 +1,29 @@
+﻿
+.text-logo-ani {
+
+  transform: translateX(-6%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+
+
+.text-logo-ani li {
+  display: inline-block;
+  float: left;
+  color: #fff;
+  opacity: 1;
+  transition: all 2.0s ease-in;
+  max-width: 2em;
+}
+.text-logo-ani.hidden li.spaced {
+  padding-left: 0;
+}
+.text-logo-ani li.spaced {
+  padding-left: 0.3em;
+}
+
+.text-logo-ani.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}

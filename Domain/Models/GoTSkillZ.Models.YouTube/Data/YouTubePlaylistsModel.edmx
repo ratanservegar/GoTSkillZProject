@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="YouTubePlaylistsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="YouTubePlaylists">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlaylistId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PlaylistTitle" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PlayListDescription" Type="nvarchar(max)" />
+          <Property Name="ChannelId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DefaultThumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="MediumThumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="HighThumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="MaxThumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="CustomThumbail" Type="nvarchar(max)" />
+          <Property Name="PlaylistItemCount" Type="int" Nullable="false" />
+          <Property Name="PlaylistActive" Type="bit" Nullable="false" />
+          <Property Name="PlaylistCreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="YouTubePlaylistsModelStoreContainer">
+          <EntitySet Name="YouTubePlaylists" EntityType="Self.YouTubePlaylists" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="YouTubePlaylistsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="YouTubePlaylist">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlaylistId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PlaylistTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PlayListDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChannelId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DefaultThumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MediumThumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HighThumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MaxThumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CustomThumbail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PlaylistItemCount" Type="Int32" Nullable="false" />
+          <Property Name="PlaylistActive" Type="Boolean" Nullable="false" />
+          <Property Name="PlaylistCreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="GoTSkillZYouTubePlaylistsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="YouTubePlaylists" EntityType="Self.YouTubePlaylist" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="YouTubePlaylistsModelStoreContainer" CdmEntityContainer="GoTSkillZYouTubePlaylistsEntities">
+          <EntitySetMapping Name="YouTubePlaylists">
+            <EntityTypeMapping TypeName="YouTubePlaylistsModel.YouTubePlaylist">
+              <MappingFragment StoreEntitySet="YouTubePlaylists">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PlaylistId" ColumnName="PlaylistId" />
+                <ScalarProperty Name="PlaylistTitle" ColumnName="PlaylistTitle" />
+                <ScalarProperty Name="PlayListDescription" ColumnName="PlayListDescription" />
+                <ScalarProperty Name="ChannelId" ColumnName="ChannelId" />
+                <ScalarProperty Name="DefaultThumbnail" ColumnName="DefaultThumbnail" />
+                <ScalarProperty Name="MediumThumbnail" ColumnName="MediumThumbnail" />
+                <ScalarProperty Name="HighThumbnail" ColumnName="HighThumbnail" />
+                <ScalarProperty Name="MaxThumbnail" ColumnName="MaxThumbnail" />
+                <ScalarProperty Name="CustomThumbail" ColumnName="CustomThumbail" />
+                <ScalarProperty Name="PlaylistItemCount" ColumnName="PlaylistItemCount" />
+                <ScalarProperty Name="PlaylistActive" ColumnName="PlaylistActive" />
+                <ScalarProperty Name="PlaylistCreatedDate" ColumnName="PlaylistCreatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

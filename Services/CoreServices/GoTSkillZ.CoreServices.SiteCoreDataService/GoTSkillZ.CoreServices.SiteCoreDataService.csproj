@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7997A529-6D0B-407B-BEF5-98C01F5C2462}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoTSkillZ.CoreServices.SiteCoreDataService</RootNamespace>
+    <AssemblyName>GoTSkillZ.CoreServices.SiteCoreDataService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Prod\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\ISiteCoreDataService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\SiteCoreDataService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Application\GoTSkillZ.Application.Transforms\GoTSkillZ.Application.Transforms.csproj">
+      <Project>{e1eb26e7-8fcb-4409-8438-5131e3144963}</Project>
+      <Name>GoTSkillZ.Application.Transforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Domain\DataUtilities\GoTSkillZ.DataUtilities.Core\GoTSkillZ.DataUtilities.Core.csproj">
+      <Project>{604cdcaa-73d1-4e49-8d6f-beb3442349e1}</Project>
+      <Name>GoTSkillZ.DataUtilities.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Domain\Models\GoTSkillZ.Models.Donation\GoTSkillZ.Models.Donation.csproj">
+      <Project>{54ba5bf3-0da4-490e-816b-cebc1bbcf3a1}</Project>
+      <Name>GoTSkillZ.Models.Donation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Domain\Models\GoTSkillZ.Models.Membership\GoTSkillZ.Models.Membership.csproj">
+      <Project>{c94dd6f1-dbab-4fa3-b805-cc74e92aaca2}</Project>
+      <Name>GoTSkillZ.Models.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Domain\Models\GoTSkillZ.Models.UserDataExtension\GoTSkillZ.Models.UserDataExtension.csproj">
+      <Project>{416e1547-4196-4001-aa2d-2df8248ed24a}</Project>
+      <Name>GoTSkillZ.Models.UserDataExtension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Domain\Models\GoTSkillZ.Models.YouTube\GoTSkillZ.Models.YouTube.csproj">
+      <Project>{5222f04b-0ec0-49e4-8667-f1c3b64b1480}</Project>
+      <Name>GoTSkillZ.Models.YouTube</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

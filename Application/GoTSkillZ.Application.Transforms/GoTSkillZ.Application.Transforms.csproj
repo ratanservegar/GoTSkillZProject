@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1EB26E7-8FCB-4409-8438-5131E3144963}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoTSkillZ.Application.Transforms</RootNamespace>
+    <AssemblyName>GoTSkillZ.Application.Transforms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Prod\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\AllConfigFileDTO.cs" />
+    <Compile Include="DTO\CityDTO.cs" />
+    <Compile Include="DTO\CountryDTO.cs" />
+    <Compile Include="DTO\CSGOSensitivityDTO.cs" />
+    <Compile Include="DTO\CSGOVideoConfigurationDTO.cs" />
+    <Compile Include="DTO\DonationDTO.cs" />
+    <Compile Include="DTO\GamePlatformConnectivityDTO.cs" />
+    <Compile Include="DTO\GameRoleDTO.cs" />
+    <Compile Include="DTO\GameTypeDTO.cs" />
+    <Compile Include="DTO\GiveawayDTO.cs" />
+    <Compile Include="DTO\GiveawayWinnerDTO.cs" />
+    <Compile Include="DTO\GiveawayWinnerTopListDTO.cs" />
+    <Compile Include="DTO\KendoFileDTO.cs" />
+    <Compile Include="DTO\KendoHierarchicalDTO.cs" />
+    <Compile Include="DTO\LoadingMessagesDTO.cs" />
+    <Compile Include="DTO\PageRoleDTO.cs" />
+    <Compile Include="DTO\PagesDTO.cs" />
+    <Compile Include="DTO\RecentSubDTO.cs" />
+    <Compile Include="DTO\ResponseDTO.cs" />
+    <Compile Include="DTO\RoleDTO.cs" />
+    <Compile Include="DTO\SitemapDTO.cs" />
+    <Compile Include="DTO\SqlParameterDTO.cs" />
+    <Compile Include="DTO\StateDTO.cs" />
+    <Compile Include="DTO\UserAchievementsDTO.cs" />
+    <Compile Include="DTO\UserGameRolesDTO.cs" />
+    <Compile Include="DTO\UserPeripheralDTO.cs" />
+    <Compile Include="DTO\UserPlayerProfile.cs" />
+    <Compile Include="DTO\UserProfileDTO.cs" />
+    <Compile Include="DTO\UserProfileExtensionDTO.cs" />
+    <Compile Include="DTO\UserSetupDataDTO.cs" />
+    <Compile Include="DTO\UserSetupDTO.cs" />
+    <Compile Include="DTO\UserSocialLinksDTO.cs" />
+    <Compile Include="DTO\UserTeamHistoryDTO.cs" />
+    <Compile Include="DTO\YouTubeLiveStreamDTO.cs" />
+    <Compile Include="DTO\YouTubePlayListDTO.cs" />
+    <Compile Include="DTO\YouTubeStatisticsDTO.cs" />
+    <Compile Include="DTO\YouTubeSubscriberListDTO.cs" />
+    <Compile Include="DTO\YouTubeSuperChatDTO.cs" />
+    <Compile Include="DTO\YouTubeVideosDTO.cs" />
+    <Compile Include="Enums\GoTSkillZEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="STO\GoogleSTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Models\GoTSkillZ.Models.CSGO\GoTSkillZ.Models.CSGO.csproj">
+      <Project>{80dced7d-0fc3-4160-acd1-5fd08b14e458}</Project>
+      <Name>GoTSkillZ.Models.CSGO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\Models\GoTSkillZ.Models.Game\GoTSkillZ.Models.Game.csproj">
+      <Project>{79aea9b6-7cb8-49c2-8599-1f16b91e4f39}</Project>
+      <Name>GoTSkillZ.Models.Game</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\Models\GoTSkillZ.Models.Location\GoTSkillZ.Models.Location.csproj">
+      <Project>{8dfadc0f-bdc5-4eb2-9f91-658f0ed9552c}</Project>
+      <Name>GoTSkillZ.Models.Location</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\Models\GoTSkillZ.Models.Membership\GoTSkillZ.Models.Membership.csproj">
+      <Project>{c94dd6f1-dbab-4fa3-b805-cc74e92aaca2}</Project>
+      <Name>GoTSkillZ.Models.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\Models\GoTSkillZ.Models.UserDataExtension\GoTSkillZ.Models.UserDataExtension.csproj">
+      <Project>{416e1547-4196-4001-aa2d-2df8248ed24a}</Project>
+      <Name>GoTSkillZ.Models.UserDataExtension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\Models\GoTSkillZ.Models.UserSetup\GoTSkillZ.Models.UserSetup.csproj">
+      <Project>{ccd0ade1-c4f2-4aac-8f64-c08af4c1d456}</Project>
+      <Name>GoTSkillZ.Models.UserSetup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\Models\GoTSkillZ.Models.YouTube\GoTSkillZ.Models.YouTube.csproj">
+      <Project>{5222f04b-0ec0-49e4-8667-f1c3b64b1480}</Project>
+      <Name>GoTSkillZ.Models.YouTube</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
